@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    color: black;
+}
+.containerc{
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px;
+}
+section{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.shopcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.shopcard{
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: .3s;
+    border: 2px solid transparent;
+}
+.shopcard:hover{
+    border-color: blueviolet;
+
+}
+.btn1{
+    max-width: 1300vh;
+    width: 100%;
+    border: 20px;
+}
