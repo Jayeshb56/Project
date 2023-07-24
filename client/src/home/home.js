@@ -10,6 +10,7 @@ import {
     MDBCardImage
 } from 'mdb-react-ui-kit';
 import './home.css'
+import Homecard from "./home.json"
 
 
 export default function App() {
@@ -51,91 +52,31 @@ export default function App() {
 
 
 
-           <center>
-            
-            <MDBCard background='primary' className='text-white mb-3 cardc m-5' style={{ maxWidth: "15rem" }}  >
            
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody >
-                    <MDBCardTitle>Primary card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-          
+            <div>
+            {
+            Homecard.map(homecard =>{
+                return(
+                    <div className='cardc'  key={homecard.id}>
+                    <MDBCard background={homecard.bg} className='text-white mb-3 m-5'  style={{ maxWidth: "15rem" }}  >
+           
+                    <MDBCardHeader>{homecard.header}</MDBCardHeader>
+                    <MDBCardBody >
+                        <MDBCardTitle>{homecard.title}</MDBCardTitle>
+                        <MDBCardText>
+                            {homecard.text}
+                        </MDBCardText>
+                    </MDBCardBody>
+                </MDBCard>
+              </div>
 
-            <MDBCard background='secondary' className='text-white mb-3 cardc m-5' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Secondary card </MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
+                )
+            })
+        }
+            
+           
 
-            <MDBCard background='success' className='text-white mb-3 cardc m-5' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Success card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-            </center>
-            <MDBCard background='danger' className='text-white mb-3 cardc m-5' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Danger card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-
-            <MDBCard background='warning' className='mb-3 cardc m-4' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Warning card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-
-            <MDBCard background='info' className='text-body mb-3 cardc m-4' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Info card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-
-            <MDBCard background='light' className='mb-3 cardc m-4' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Light card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-<center>
-            <MDBCard background='dark' className='text-white cardc m-4' style={{ maxWidth: "15rem" }}>
-                <MDBCardHeader>Header</MDBCardHeader>
-                <MDBCardBody>
-                    <MDBCardTitle>Dark card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </MDBCardText>
-                </MDBCardBody>
-            </MDBCard>
-            </center>
-        </div>
-
+         </div>
+         </div>
     );
 }

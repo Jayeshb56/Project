@@ -6,12 +6,22 @@
 body{
     background-color: antiquewhite;
     color: black;
+    margin-left: 50px;
 }
-.containerc{
-  max-width: 1000px;
-  width: 100%;
-  margin: 20px;
-}
+.box{
+    
+    margin: 6px;
+    padding: 20px;
+    max-width:400px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    justify-content: center;
+    display: inline-block;
+    
+ }
+ .image{
+     max-width: 400px;
+     max-height: 500px;
+ }
 section{
    
     display: flex;
@@ -23,11 +33,11 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 400px;
+    max-height: 500px;
 }
 .shopcard{
-    flex: 0 0 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
-    width: 100%;
+    
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
